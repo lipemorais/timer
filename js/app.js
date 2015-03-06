@@ -5,7 +5,6 @@
  * e assim por diante..
  *
  * Podendo pausar, começar e reiniciar.
- *   
  */
  
 var Clock = {
@@ -55,9 +54,11 @@ var Clock = {
     },
     stop: function () {
         this.status = "stoped";
+        
     },
     restart: function restart() {
         this.seconds = 0;
+        this.status = "started";
     }
 };
 
