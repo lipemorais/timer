@@ -6,8 +6,7 @@
  *
  * Podendo pausar, começar e reiniciar.
  */
- 
-var Clock = {
+var Timer = {
     self: null,
     hours: 00,
     minutes: 00,
@@ -15,7 +14,6 @@ var Clock = {
     hourInSeconds: 3600,
     minutesInSeconds: 60,
     status: "started",
-    
     update: function update() {
         console.log("mais um segundo");
         if (this.status == "stoped") {
@@ -54,7 +52,7 @@ var Clock = {
     },
     stop: function () {
         this.status = "stoped";
-        
+        window.clearInterval()
     },
     restart: function restart() {
         this.seconds = 0;
@@ -62,4 +60,5 @@ var Clock = {
     }
 };
 
-Clock.start();
+
+Timer.start();
